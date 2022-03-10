@@ -1,0 +1,14 @@
+334CA Ciorceanu Andrei Razvan
+
+1.2 Accesible: Prima data citim datele de intrare de la stdin,adica valorile pentru n,m,s,f,
+apoi alocam matricea n * m pentru tranzitiile starilor, si alocam un vector de dimensiune s
+pentru starile initiale si un vector de dimensiune f pentru starile finale.
+	Alocam un vector de boolean pentru fiecare stare pentru a vedea daca a mai fost vizitata
+pe care il declaram initial cu false, apoi pornim cu cate un dfs din fiecare stare initiala pentru a 
+putea vedea in ce alte stari ajungem, adica ce stari sunt accesibile,pe care le marcam in vectorul de visited. La final afisam starile din vectorul de visited care au fost marcate cu true.
+
+1.3 Productive: Alocam acelasi vector de visited, pornim cu un dfs din toate starile automatului pentru a putea vedea care sunt starile din care putem ajunge intr o stare finala, apoi afisam aceste stari daca sunt marcate cu true in vectorul de visited.
+
+1.4 Useful: Procedam la fel ca la subpunctele anterioare,alocam vectorul de visited,pornim cu un dfs din starile initiaile ale automatului si vedem starile care ajung intr o stare finala. Combinam subpunctele anterioare si afisam starile care sunt atat accesible cat si productive.
+
+1.5 Synchronize: Am facut o clasa de pereche pentru a putea lua cate 2 stari in pereche, pentru care urmaril si retinem simbolurile pana cand ajung intr o stare comuna. Marcam aces pereche in map-ul nostru cu true si trecem la urmatoarea pereche.
